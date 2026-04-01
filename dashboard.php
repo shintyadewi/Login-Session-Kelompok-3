@@ -10,6 +10,19 @@ if(!isset($_SESSION['user'])){
 // ambil data user berdasarkan session
 $data = $koneksi->query("SELECT * FROM users WHERE username='".$_SESSION['user']."'");
 $user = $data->fetch_assoc();
+
+// salam
+$jam = date("H");
+
+if ($jam < 12) {
+    $salam = "Selamat pagi";
+} elseif ($jam < 15) {
+    $salam = "Selamat siang";
+} elseif ($jam < 18) {
+    $salam = "Selamat sore";
+} else {
+    $salam = "Selamat malam";
+}
 ?>
 
 <!DOCTYPE html>
@@ -107,11 +120,10 @@ body {
     <div class="content">
 
         <div class="card">
-            <h2>Selamat Datang 👋</h2>
+             <h2><?php echo $salam; ?> 👋</h2>
             <p>Halo <b><?php echo $user['username']; ?></b>, selamat datang di dashboard!</p>
         </div>
 
-       
 
     </div>
 </div>
