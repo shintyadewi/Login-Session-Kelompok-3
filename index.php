@@ -35,7 +35,7 @@
 
 /* tombol */
 .btn-custom {
-    background: linear-gradient(45deg, #ff6a4a, #fda763);
+    background: linear-gradient(45deg, #f6416c, #fff6b7);
     border: none;
     color: white;
     padding: 12px 30px;
@@ -48,7 +48,7 @@
 .btn-custom:hover {
     transform: translateY(-3px);
     box-shadow: 0 8px 20px rgba(0,0,0,0.3);
-    background: linear-gradient(45deg, #ff7e5f, #feb47b);
+    background: linear-gradient(45deg, #fff6b7, #f6416c);
 }
 
 .btn-custom:active {
